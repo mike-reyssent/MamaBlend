@@ -1,0 +1,185 @@
+/* Menghilangkan scrollbar */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/* Mengatur ukuran dan posisi video */
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%; /* Ukuran video menjadi 80% dari tinggi layar */
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header dan Menu Bar */
+.top-header {
+    background-color: #add8e6;
+    padding: 5px 50px;
+    display: flex;
+    justify-content: center; /* Menempatkan brand dan menu di tengah */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Navbar Styling */
+.menu-bar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Item */
+.menu-bar ul li {
+    margin-right: 15px;
+}
+
+/* Navbar Links */
+.menu-bar ul li a {
+    text-decoration: none;
+    font-family: 'Abang', sans-serif;
+    color: navy;
+    font-size: 1rem;
+    padding: 10px 20px; /* Menambahkan padding untuk memberikan ruang di sekitar teks */
+    border-radius: 5px; /* Agar sudut box lebih lembut */
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Menambahkan efek transisi */
+}
+
+/* Navbar Links Hover */
+.menu-bar ul li a:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 128, 0.2); /* Mengubah warna latar belakang menjadi transparan biru */
+    color: white; /* Mengubah warna teks saat hover */
+}
+
+/* Brand Styling */
+.brand h1 {
+    font-size: 2rem;
+    color: navy;
+    font-style: italic;
+    margin: 0;
+    margin-right: 150px; /* Menambahkan jarak antara brand dan navbar (5x lipat dari sebelumnya) */
+    padding: 10px 20px; /* Menambahkan padding untuk memberikan ruang di sekitar teks */
+    border-radius: 5px; /* Agar sudut box lebih lembut */
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Menambahkan efek transisi */
+}
+
+/* Brand Hover Effect */
+.brand h1:hover {
+    background-color: rgba(0, 0, 128, 0.2); /* Mengubah warna latar belakang menjadi transparan biru */
+    color: white; /* Mengubah warna teks saat hover */
+    cursor: pointer; /* Menunjukkan bahwa elemen dapat diklik */
+}
+
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 80vh; /* Membuat tinggi hero section 80% dari tinggi layar */
+    text-align: center;
+    color: white;
+}
+
+/* Video Background */
+.hero-section .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Menjamin video mengisi seluruh hero section */
+    z-index: -1;
+}
+
+.hero-section .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Kontainer teks dan tombol */
+.hero-section .container {
+    position: absolute;
+    bottom: 20px; /* Menempatkan teks dan tombol di bawah */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.hero-section .container h1 {
+    font-size: 2.5rem;
+}
+
+.hero-section .cta-button {
+    background-color: #1e3c72;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.hero-section .cta-button:hover {
+    background-color: #f1c40f;
+}
+
+/* Kontainer teks dan tombol */
+.hero-section .container {
+    position: absolute;
+    bottom: 20px; /* Menempatkan teks di bagian bawah */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Menambahkan latar belakang semi-transparan */
+    padding: 20px;
+    border-radius: 10px; /* Memberikan sedikit radius pada sudut */
+}
+
+/* Heading */
+.hero-section .container h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Tombol */
+.hero-section .cta-button {
+    background-color: #1e3c72;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.hero-section .cta-button:hover {
+    background-color: #f1c40f;
+}
+
+/* Footer - Dipindahkan ke bawah */
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer p {
+    font-size: 1rem;
+    color: gray;
+}
