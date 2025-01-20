@@ -131,6 +131,7 @@ body {
     align-items: flex-start;
     margin-bottom: 40px;
     flex-wrap: wrap; /* Agar responsif di layar kecil */
+    padding-top: 40px;
 }
 
 .video-container {
