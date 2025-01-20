@@ -23,89 +23,74 @@ body {
 }
 
 /* Header */
-/* Umum untuk Navbar */
+/* Styling untuk navbar */
 .navbar {
-    background-color: #add8e6;
-    padding: 10px 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #333;
 }
 
-.logo a {
-    font-size: 24px; /* Ukuran font untuk logo */
-    text-decoration: none;
+.navbar .logo a {
+    font-size: 24px;
     color: white;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.nav-links ul {
-    display: flex;
+.navbar-menu {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
 }
 
-.nav-links ul li {
-    margin-right: 20px;
+.navbar-menu li {
+    margin-left: 20px;
 }
 
-.nav-links ul li a {
-    color: white;
+.navbar-menu li a {
     text-decoration: none;
-    font-size: 16px;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
 }
 
-/* Hamburger */
-.hamburger {
+.menu-toggle {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
     cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.hamburger span {
-    background-color: white;
+.menu-toggle .bar {
+    width: 25px;
     height: 3px;
-    width: 100%;
+    background-color: white;
 }
 
-/* Responsif - Mobile */
+/* Responsif untuk layar kecil */
 @media screen and (max-width: 768px) {
-    .nav-links {
-        display: none; /* Menyembunyikan navbar pada layar kecil */
+    .navbar-menu {
+        display: none;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
         position: absolute;
         top: 60px;
-        right: 20px;
-        background-color: #333;
-        padding: 10px;
-        border-radius: 5px;
-        width: 200px;
+        left: 0;
+        right: 0;
     }
 
-    .nav-links ul {
-        flex-direction: column;
-        margin: 0;
+    .navbar-menu li {
+        margin: 10px 0;
     }
 
-    .nav-links ul li {
-        margin-bottom: 15px;
+    .menu-toggle {
+        display: flex;
     }
 
-    .hamburger {
-        display: flex; /* Menampilkan tombol hamburger */
-    }
-
-    .nav-links.active {
-        display: block; /* Menampilkan navbar ketika tombol hamburger ditekan */
+    .navbar-menu.active {
+        display: block;
     }
 }
 
