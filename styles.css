@@ -63,6 +63,7 @@ body {
 }
 
 
+
 .menu-bar ul li a:hover {
     background-color: rgba(0, 0, 128, 0.2);
     color: white;
@@ -72,10 +73,15 @@ body {
 .brand h1 {
     font-size: 2rem;
     color: navy;
+    font-style: italic;
     margin: 0;
-    margin-right: 50px;
-    transition: color 0.3s ease;
+    margin-right: 150px; /* Menambahkan jarak antara brand dan navbar */
+    padding: 10px 20px; 
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease; 
 }
+
 
 .brand h1:hover {
     color: #f1c40f;
