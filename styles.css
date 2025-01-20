@@ -54,15 +54,13 @@ body {
     font-family: 'Abang', sans-serif;
     color: navy;
     font-size: 1rem;
-    font-weight: bold; /* Menjadikan teks bold */
-    text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+    font-weight: bold;
+    text-transform: uppercase;
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
     transition: background-color 0.3s ease;
 }
-
-
 
 .menu-bar ul li a:hover {
     background-color: rgba(0, 0, 128, 0.2);
@@ -75,13 +73,12 @@ body {
     color: navy;
     font-style: italic;
     margin: 0;
-    margin-right: 150px; /* Menambahkan jarak antara brand dan navbar */
+    margin-right: 150px;
     padding: 10px 20px; 
     border-radius: 5px;
     display: inline-block;
     transition: background-color 0.3s ease; 
 }
-
 
 .brand h1:hover {
     color: #f1c40f;
@@ -126,23 +123,192 @@ body {
     background-color: #f1c40f;
 }
 
+/* Produk Section */
+.product-demo-section {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+/* Video Produk */
+.video-container {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 9 / 16;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid #add8e6;
+}
+
+/* Deskripsi Produk */
+.product-description {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Styling untuk List Fitur */
+.product-description ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.product-description ul li {
+    margin-bottom: 20px;
+}
+
+/* Call-to-Action */
+.cta-promo {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cta-promo .cta-button {
+    background-color: #1e3c72;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 100px; /* Menambahkan jarak bawah antara tombol dan countdown */
+    margin-top: 100px;
+}
+
+.cta-promo .cta-button:hover {
+    background-color: #f1c40f;
+}
+
+/* Promo Countdown Timer */
+.fomo {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    
+}
+
+.countdown-timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 35px; /* Menambahkan jarak bawah antara tombol dan countdown */
+    margin-top: 35px;
+}
+
+.checkout-icons {
+    margin-bottom: 35px; /* Menambahkan jarak bawah antara tombol dan countdown */
+    margin-top: 35px;
+}
 /* Footer */
 .footer {
-    background-color: #f1f1f1;
-    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    padding: 10px 0;
 }
 
-.footer p {
-    font-size: 1rem;
-    color: gray;
+/* Responsif */
+@media (max-width: 768px) {
+    .top-header {
+        padding: 15px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand h1 {
+        font-size: 1.5rem;
+        margin-right: 0;
+    }
+
+    .menu-bar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-bar ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+        padding: 8px 15px;
+    }
+
+    .product-demo-section {
+        flex-direction: column;
+    }
+
+    .video-container video {
+        width: 80%;
+        max-width: 350px;
+    }
+
+    .product-description {
+        text-align: center;
+    }
+
+    .cta-promo .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
 }
 
-/* Memberikan jarak konten setelah header */
-main {
-    padding-top: 60px;
+/* Harga Asli */
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    font-style: italic;
+}
+
+/* Harga Promo */
+.promo-price {
+    color: #e74c3c;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+/* Efek Animasi Harga Promo */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        color: #e74c3c;
+    }
+    50% {
+        transform: scale(1.1);
+        color: #c0392b;
+    }
 }
