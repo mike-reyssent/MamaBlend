@@ -168,6 +168,18 @@ body {
 
 .product-description ul li {
     margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.product-description strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.product-description em {
+    font-style: italic;
+    color: #555;
 }
 
 
