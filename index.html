@@ -13,12 +13,18 @@
         <a href="#"><h1>MamaBlend</h1></a>
     </div>
     <nav class="menu-bar">
-        <ul>
+        <ul class="menu-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#license">Licence</a></li>
         </ul>
     </nav>
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </header>
 
 
@@ -116,9 +122,9 @@
     const timerInterval = setInterval(updateTimer, 1000);
     updateTimer();
 
-    // JavaScript untuk toggle menu hamburger
+    // Toggle menu ketika hamburger diklik
 document.getElementById("hamburger").addEventListener("click", function() {
-    document.querySelector(".nav-links").classList.toggle("active");
+    document.querySelector(".menu-bar").classList.toggle("active");
 });
 
 </script>
