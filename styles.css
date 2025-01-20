@@ -23,49 +23,87 @@ body {
 }
 
 /* Header */
-.top-header {
-    background-color: #add8e6;
-    padding: 10px 50px;
+/* Umum untuk Navbar */
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
 }
 
-/* Navbar */
-.menu-bar ul {
+.logo a {
+    font-size: 24px; /* Ukuran font untuk logo */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.menu-bar ul li {
-    margin-right: 15px;
+.nav-links ul li {
+    margin-right: 20px;
 }
 
-.menu-bar ul li a {
-    text-decoration: none;
-    font-family: 'Abang', sans-serif;
-    color: navy;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.menu-bar ul li a:hover {
-    background-color: rgba(0, 0, 128, 0.2);
+.nav-links ul li a {
     color: white;
+    text-decoration: none;
+    font-size: 16px;
 }
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+}
+
+/* Responsif - Mobile */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Menyembunyikan navbar pada layar kecil */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        width: 200px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .nav-links ul li {
+        margin-bottom: 15px;
+    }
+
+    .hamburger {
+        display: flex; /* Menampilkan tombol hamburger */
+    }
+
+    .nav-links.active {
+        display: block; /* Menampilkan navbar ketika tombol hamburger ditekan */
+    }
+}
+
 
 /* Brand */
 .brand h1 {
