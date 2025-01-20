@@ -22,12 +22,12 @@ body {
     z-index: -1;
 }
 
-/* Header */
+/* Header */ 
 .top-header {
     background-color: #add8e6;
     padding: 10px 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Logo di kiri, menu di kanan */
     align-items: center;
     position: fixed;
     top: 0;
@@ -54,21 +54,18 @@ body {
     font-family: 'Abang', sans-serif;
     color: navy;
     font-size: 1rem;
-    font-weight: bold; /* Menjadikan teks bold */
-    text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+    font-weight: bold;
+    text-transform: uppercase;
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
     transition: background-color 0.3s ease;
 }
 
-
-
 .menu-bar ul li a:hover {
     background-color: rgba(0, 0, 128, 0.2);
     color: white;
 }
-
 
 /* Brand */
 .brand h1 {
@@ -341,3 +338,54 @@ body {
     }
 }
 
+/* Hamburger Button */
+.hamburger {
+    display: none; /* Menyembunyikan hamburger di layar besar */
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 21px;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: navy;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Sembunyikan menu bar asli pada layar kecil */
+    .menu-bar ul {
+        display: none;
+    }
+
+    /* Tampilkan hamburger menu di layar kecil */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Menu muncul setelah hamburger di klik */
+    .menu-bar.active ul {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #add8e6;
+        width: 250px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    .menu-bar.active ul li {
+        text-align: right;
+        padding: 10px 20px;
+    }
+
+    .menu-bar.active ul li a {
+        font-size: 1.2rem;
+        color: navy;
+    }
+}
