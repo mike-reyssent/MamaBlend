@@ -23,75 +23,50 @@ body {
 }
 
 /* Header */
-/* Styling untuk navbar */
-.navbar {
+.top-header {
+    background-color: #add8e6;
+    padding: 10px 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .logo a {
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar-menu {
-    list-style: none;
+/* Navbar */
+.menu-bar ul {
     display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.navbar-menu li {
-    margin-left: 20px;
+.menu-bar ul li {
+    margin-right: 15px;
 }
 
-.navbar-menu li a {
+.menu-bar ul li a {
     text-decoration: none;
+    font-family: 'Abang', sans-serif;
+    color: navy;
+    font-size: 1rem;
+    font-weight: bold; /* Menjadikan teks bold */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.menu-bar ul li a:hover {
+    background-color: rgba(0, 0, 128, 0.2);
     color: white;
-    font-size: 18px;
-    font-weight: normal;
-}
-
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-}
-
-/* Responsif untuk layar kecil */
-@media screen and (max-width: 768px) {
-    .navbar-menu {
-        display: none;
-        width: 100%;
-        text-align: center;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-    }
-
-    .navbar-menu li {
-        margin: 10px 0;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .navbar-menu.active {
-        display: block;
-    }
 }
 
 
