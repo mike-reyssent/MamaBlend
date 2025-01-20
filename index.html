@@ -35,12 +35,82 @@
             <a href="#products" class="cta-button">Lihat Produk</a>
         </div>
     </section>
+
+    <section class="product-demo-section">
+        <!-- Video Produk -->
+        <div class="video-container">
+            <video src="assets/videos/productdemo.mp4" controls></video>
+        </div>
+    
+        <!-- Deskripsi Produk -->
+        <div class="product-description">
+            <ul>
+                <li>
+                    <strong>💡 Desain Mini, Praktis Dibawa:</strong>
+                    <p>Nggak makan tempat, gampang dipindah-pindah, dan cocok banget buat dapur mungil atau dibawa liburan.</p>
+                </li>
+                <li>
+                    <strong>⚡ Motor Kuat:</strong>
+                    <p>Walau kecil, blender ini punya tenaga besar. Buah, sayur, bahkan kacang-kacangan langsung halus dalam hitungan detik!</p>
+                </li>
+                <li>
+                    <strong>🍳 Multifungsi:</strong>
+                    <p>Mau bikin jus segar, menggiling bumbu dapur, atau menghaluskan rempah? Semua bisa! Cukup satu alat untuk segala kebutuhan masak Anda.</p>
+                </li>
+                <li>
+                    <strong>✨ Mudah Dibersihkan:</strong>
+                    <p>Bagian-bagian blender gampang dilepas dan dicuci. Jadi, nggak ada drama bersih-bersih setelah masak!</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+             
+    <section class="cta-promo">
+        <div class="cta-content">
+            <h2>Ayo, Jangan Lewatkan Kesempatan Emas Ini!</h2>
+            <p>Blender Gilingan Mini – Si Kecil yang Serba Bisa untuk Dapur Anda, sekarang hadir dengan harga promo spesial! Dapatkan dengan harga hanya </p>
+            <p>
+                <span class="original-price">Rp 279.000,-</span> 
+                <span class="promo-price">Rp 128.000,-</span>
+            </p>
+            
+            <div class="fomo">
+                <a href="https://wa.link/fd5y3t" class="cta-button" target="_blank">Order Sekarang !</a>
+                <p>Waktu Terbatas! Promo Hanya Berlaku Sampai</p>
+                <div id="countdown-timer" class="countdown-timer">30:00</div>
+            </div>
+            <!-- Gambar Checkout Icons -->
+            <div class="checkout-icons">
+                <img src="assets/videos/images/checkout-icons.webp" alt="Checkout Icons" />
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="footer" id="license">
     <div class="container">
-        <p>&copy; 2025 Blender Premium. Semua Hak Dilindungi.</p>
+        <p>&copy; 2025 MamaBlend. All Copyright reserved.</p>
     </div>
 </footer>
+
+<script>
+    const timerElement = document.getElementById('countdown-timer');
+    let time = 30 * 60; // 30 menit dalam detik
+
+    function updateTimer() {
+        const minutes = Math.floor(time / 60);
+        const seconds = time % 60;
+        timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        time--;
+
+        if (time < 0) {
+            clearInterval(timerInterval);
+            timerElement.textContent = 'Promo berakhir!';
+        }
+    }
+
+    const timerInterval = setInterval(updateTimer, 1000);
+    updateTimer();
+</script>
 </body>
 </html>
