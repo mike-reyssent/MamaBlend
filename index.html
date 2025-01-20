@@ -8,18 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Abang&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="top-header">
-    <div class="brand">
-        <a href="#"><h1>MamaBlend</h1></a>
+<header class="navbar">
+    <div class="logo">
+        <a href="#">MamaBlend</a>
     </div>
-    <nav class="menu-bar">
+    <nav class="nav-links">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#license">Licence</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Licence</a></li>
         </ul>
     </nav>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </header>
+
 
 <main>
     <section class="hero-section">
@@ -113,6 +119,12 @@
 
     const timerInterval = setInterval(updateTimer, 1000);
     updateTimer();
+
+    // JavaScript untuk toggle menu hamburger
+document.getElementById("hamburger").addEventListener("click", function() {
+    document.querySelector(".nav-links").classList.toggle("active");
+});
+
 </script>
 </body>
 </html>
