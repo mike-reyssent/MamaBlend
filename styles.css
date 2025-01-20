@@ -126,13 +126,13 @@ body {
 /* Produk Section */
 .product-demo-section {
     display: flex;
-    gap: 40px;
+    gap: 20px; /* Jarak antara video dan deskripsi */
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 40px;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
 }
 
-/* Video Produk */
 .video-container {
     flex: 1;
     max-width: 45%;
@@ -143,38 +143,33 @@ body {
 .video-container video {
     width: 100%;
     max-width: 400px;
-    aspect-ratio: 9 / 16;
-    border-radius: 20px;
+    border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: 3px solid #add8e6;
 }
 
-/* Deskripsi Produk */
 .product-description {
     flex: 1;
     max-width: 45%;
-    text-align: left;
-    font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.8;
     font-family: 'Roboto', sans-serif;
-    padding: 10px 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Styling untuk List Fitur */
 .product-description ul {
     padding: 0;
-    list-style-type: none;
     margin: 0;
+    list-style: none;
 }
 
 .product-description ul li {
     margin-bottom: 20px;
 }
+
 
 /* Call-to-Action */
 .cta-promo {
